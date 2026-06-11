@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Competitive Circle – Official Companion Guide</title>
+    <title>Competitive Circle – Official Companion Guide & Business Primer</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f7fa;
@@ -19,22 +17,39 @@
             line-height: 1.6;
             padding: 2rem 1rem;
         }
-
         .container {
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
             background-color: #ffffff;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             padding: 2.5rem 2rem;
         }
-
         h1 {
             font-size: 2rem;
             margin-bottom: 0.25rem;
             color: #0f172a;
         }
-
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+        h4 {
+            font-size: 1.05rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: #475569;
+        }
         .subtitle {
             font-size: 1.1rem;
             color: #475569;
@@ -42,23 +57,19 @@
             border-bottom: 1px solid #e2e8f0;
             padding-bottom: 1rem;
         }
-
-        /* Collapsible section styling */
         details {
             margin-bottom: 1.5rem;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             overflow: hidden;
         }
-
         details[open] {
             border-color: #2563eb;
         }
-
         summary {
             background-color: #f8fafc;
             padding: 1rem 1.5rem;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
             list-style: none;
@@ -67,29 +78,24 @@
             gap: 0.5rem;
             transition: background-color 0.2s;
         }
-
         summary:hover {
             background-color: #e2e8f0;
         }
-
         summary::before {
             content: "►";
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: transform 0.2s;
             color: #2563eb;
             font-weight: bold;
         }
-
         details[open] summary::before {
             transform: rotate(90deg);
         }
-
         .section-content {
             padding: 1.5rem;
             background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
         }
-
         .notice {
             background: #eff6ff;
             border-left: 4px solid #2563eb;
@@ -98,288 +104,229 @@
             margin-bottom: 2rem;
             color: #1e3a8a;
         }
-
-        /* Tables */
+        .primer-notice {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            color: #14532d;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 1.2rem 0;
             font-size: 0.95rem;
         }
-
         th,
         td {
             border: 1px solid #cbd5e1;
             padding: 0.65rem 0.9rem;
             text-align: left;
         }
-
         th {
             background-color: #f1f5f9;
             font-weight: 600;
         }
-
-        /* Bullet lists */
         ul,
         ol {
             margin-left: 1.5rem;
             margin-bottom: 1rem;
         }
-
         li {
             margin-bottom: 0.35rem;
         }
-
         hr {
             margin: 1.8rem 0;
             border: 0;
             border-top: 1px solid #e2e8f0;
         }
-
         .footer-note {
             margin-top: 2rem;
             font-style: italic;
             color: #475569;
             text-align: center;
         }
-
-        .toc {
+        nav.toc {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 10px;
             padding: 1rem 1.2rem;
             margin-bottom: 2rem;
         }
-
-        .toc ul {
-            margin-top: .8rem;
+        nav.toc ul {
+            margin-top: 0.8rem;
         }
-
-        .toc a {
+        nav.toc a {
             text-decoration: none;
             color: #2563eb;
         }
-
-        .toc a:hover {
+        nav.toc a:hover {
             text-decoration: underline;
         }
-
+        .toc-section {
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: #475569;
+        }
+        .quote-block {
+            background: #f8fafc;
+            border-left: 3px solid #94a3b8;
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #475569;
+        }
         @media (max-width: 600px) {
             .container {
                 padding: 1.5rem 1rem;
             }
-
             summary {
-                font-size: 1.1rem;
+                font-size: 1.05rem;
                 padding: 0.8rem 1rem;
             }
         }
     </style>
 </head>
-
 <body>
     <div class="container">
+
         <h1>Competitive Circle</h1>
+        <p class="subtitle">Official Companion Guide &amp; Business Primer</p>
 
-        <p class="subtitle">
-            Official Companion Guide
-        </p>
+        <!-- Shared Notice -->
         <div class="notice">
-            <strong>Important:</strong><br><br>
-
-            Competitive Circle is an evidence-informed strategic reasoning
-            framework. The thresholds and examples presented in this guide
-            are practical heuristics rather than universal rules.
-
-            Strategic judgment remains essential, and context should always
-            prevail over mechanical scoring.
+            <strong>Important:</strong> Competitive Circle is an evidence-informed strategic reasoning framework. The thresholds and examples in this guide are practical heuristics, not universal rules. Strategic judgment remains essential, and context should always prevail over mechanical scoring.
         </div>
 
-        <p style="
-    color:#64748b;
-    margin-top:-1rem;
-    margin-bottom:2rem;
-    font-size:1rem;
-">
-            Extending the framework with evidence-based calibration methods and practical examples.
+        <p style="color:#64748b; margin-top:-1rem; margin-bottom:2rem; font-size:1rem;">
+            Extending the framework with evidence-based calibration, practical examples, and a complete business primer for newcomers.
         </p>
+
+        <!-- TABLE OF CONTENTS -->
         <details open>
-
-            <nav class="toc">
-                <h3>Contents</h3>
-
+            <summary>Contents</summary>
+            <nav class="toc" style="margin-top:0;">
+                <p class="toc-section">Part A — Companion Guide (Data-to-Model)</p>
                 <ul>
                     <li><a href="#intro">Introduction</a></li>
                     <li><a href="#pipeline">1. Data-to-Board Pipeline</a></li>
                     <li><a href="#evidence">2. Evidence Quality</a></li>
                     <li><a href="#thermal">3. Thermal Zones</a></li>
                     <li><a href="#sff">4. Strategic Force Field</a></li>
-                    <li><a href="#mass">5. Strategic Mass & Anchors</a></li>
+                    <li><a href="#mass">5. Strategic Mass &amp; Anchors</a></li>
                     <li><a href="#dependencies">6. Dependency Arrows</a></li>
                     <li><a href="#example">7. Illustrative Example</a></li>
                     <li><a href="#session">8. Running the Session</a></li>
-                    <li><a href="#resources">9. Further Resources</a></li>
+                </ul>
+                <p class="toc-section" style="margin-top:1rem;">Part B — Business Primer (Understanding Markets)</p>
+                <ul>
+                    <li><a href="#primer-intro">Introduction to the Primer</a></li>
+                    <li><a href="#primer1">1. What Is a Market?</a></li>
+                    <li><a href="#primer2">2. The Players — Who Competes and Why</a></li>
+                    <li><a href="#primer3">3. Customers Are Not a Monolith</a></li>
+                    <li><a href="#primer4">4. The Flow of Value</a></li>
+                    <li><a href="#primer5">5. Markets Are Never Still</a></li>
+                    <li><a href="#primer6">6. Resources — More Than Just Money</a></li>
+                    <li><a href="#primer7">7. Positioning — Where You Stand Matters</a></li>
+                    <li><a href="#primer8">8. The Unfair Advantages — Moats, Brands, and Networks</a></li>
+                    <li><a href="#primer9">9. The Weight You Carry — Inertia, Legacy, and Culture</a></li>
+                    <li><a href="#primer10">10. The Many Shapes of a Fight</a></li>
+                    <li><a href="#primer11">11. How Companies Actually Move</a></li>
+                    <li><a href="#primer12">12. The Indirect Game</a></li>
+                    <li><a href="#primer13">13. Alliances and Frenemies</a></li>
+                    <li><a href="#primer14">14. Why Smart People Make Dumb Decisions</a></li>
+                    <li><a href="#primer15">15. The Emotional Market</a></li>
+                    <li><a href="#primer16">16. Thinking in Time — Cycles, Delays, and Patience</a></li>
+                    <li><a href="#primer17">17. Seeing the Whole Board</a></li>
+                    <li><a href="#primer18">18. A Language for Strategy</a></li>
+                </ul>
+                <p class="toc-section" style="margin-top:1rem;">Shared</p>
+                <ul>
+                    <li><a href="#resources">Further Resources</a></li>
                 </ul>
             </nav>
+        </details>
+
+        <!-- ==================== PART A: COMPANION GUIDE ==================== -->
+        <h2 id="part-a">Part A — Companion Guide</h2>
+
+        <details id="intro">
             <summary>Introduction</summary>
             <div class="section-content">
-                <p>The Competitive Circle is an evidence‑informed strategic reasoning framework. It does not eliminate
-                    judgment; it structures judgment around observable evidence and explicitly acknowledged uncertainty.
-                    This companion guide shows how to ground a session in real‑world data—annual reports, market
-                    intelligence, earnings calls, and other public sources—so that the board reflects not only intuition
-                    but verifiable facts.</p>
-                <p>The thresholds and examples presented here are practical heuristics, not universal rules. Strategic
-                    judgment remains essential, and context should always prevail over mechanical scoring. Use this
-                    guide to bring discipline to your calibration, not to replace the conversation that gives the
-                    framework its power.</p>
+                <p>The Competitive Circle is an evidence‑informed strategic reasoning framework. It does not eliminate judgment; it structures judgment around observable evidence and explicitly acknowledged uncertainty. This guide shows how to ground a session in real‑world data—annual reports, market intelligence, earnings calls, and other public sources—so that the board reflects not only intuition but verifiable facts.</p>
+                <p>The thresholds and examples presented here are practical heuristics, not universal rules. Strategic judgment remains essential, and context should always prevail over mechanical scoring. Use this guide to bring discipline to your calibration, not to replace the conversation that gives the framework its power.</p>
             </div>
         </details>
 
-        <!-- 1. The Data‑to‑Board Pipeline -->
-        <details>
+        <details id="pipeline">
             <summary>1. The Data‑to‑Board Pipeline</summary>
             <div class="section-content">
-                <p>Every variable in the Competitive Circle can be informed by evidence. The table below maps common
-                    sources to the variables they support.</p>
+                <p>Every variable in the Competitive Circle can be informed by evidence. The table below maps common sources to the variables they support.</p>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Data Source</th>
-                            <th>Informs</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Data Source</th><th>Informs</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Annual Report (10‑K, 20‑F)</td>
-                            <td>Segments, revenue, profit, risk factors, strategy</td>
-                        </tr>
-                        <tr>
-                            <td>Earnings Call Transcripts</td>
-                            <td>Management tone, competitive positioning, near‑term priorities</td>
-                        </tr>
-                        <tr>
-                            <td>Industry Reports (Gartner, IDC, etc.)</td>
-                            <td>Market share, growth rates, market size</td>
-                        </tr>
-                        <tr>
-                            <td>Customer Reviews / NPS</td>
-                            <td>Loyalty Friction</td>
-                        </tr>
-                        <tr>
-                            <td>Glassdoor / LinkedIn</td>
-                            <td>Talent Field</td>
-                        </tr>
-                        <tr>
-                            <td>News / Analyst Reports</td>
-                            <td>Narrative Tension, Regulatory Wind</td>
-                        </tr>
-                        <tr>
-                            <td>Competitor Filings</td>
-                            <td>Adversary archetypes, competitor resources</td>
-                        </tr>
+                        <tr><td>Annual Report (10‑K, 20‑F)</td><td>Segments, revenue, profit, risk factors, strategy</td></tr>
+                        <tr><td>Earnings Call Transcripts</td><td>Management tone, competitive positioning, near‑term priorities</td></tr>
+                        <tr><td>Industry Reports (Gartner, IDC, etc.)</td><td>Market share, growth rates, market size</td></tr>
+                        <tr><td>Customer Reviews / NPS</td><td>Loyalty Friction</td></tr>
+                        <tr><td>Glassdoor / LinkedIn</td><td>Talent Field</td></tr>
+                        <tr><td>News / Analyst Reports</td><td>Narrative Tension, Regulatory Wind</td></tr>
+                        <tr><td>Competitor Filings</td><td>Adversary archetypes, competitor resources</td></tr>
                     </tbody>
                 </table>
             </div>
         </details>
 
-        <!-- 2. Evidence Quality -->
-        <details>
+        <details id="evidence">
             <summary>2. Evidence Quality</summary>
             <div class="section-content">
-                <p>Not all data carry the same weight. The following table offers a qualitative guide to the confidence
-                    you might place in different types of evidence. Use it to calibrate how firmly you anchor a
-                    variable.</p>
+                <p>Not all data carry the same weight. Use this table to calibrate how firmly you anchor a variable.</p>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Evidence</th>
-                            <th>Typical Confidence</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Evidence</th><th>Typical Confidence</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Audited financial statements</td>
-                            <td>High</td>
-                        </tr>
-                        <tr>
-                            <td>Regulatory filings</td>
-                            <td>High</td>
-                        </tr>
-                        <tr>
-                            <td>Annual reports (management discussion)</td>
-                            <td>High</td>
-                        </tr>
-                        <tr>
-                            <td>Earnings call transcripts</td>
-                            <td>Medium‑High</td>
-                        </tr>
-                        <tr>
-                            <td>Industry analyst reports</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>Market research / surveys</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>News coverage</td>
-                            <td>Medium</td>
-                        </tr>
-                        <tr>
-                            <td>Social media sentiment</td>
-                            <td>Low‑Medium</td>
-                        </tr>
-                        <tr>
-                            <td>Pure intuition</td>
-                            <td>Low</td>
-                        </tr>
+                        <tr><td>Audited financial statements</td><td>High</td></tr>
+                        <tr><td>Regulatory filings</td><td>High</td></tr>
+                        <tr><td>Annual reports (management discussion)</td><td>High</td></tr>
+                        <tr><td>Earnings call transcripts</td><td>Medium‑High</td></tr>
+                        <tr><td>Industry analyst reports</td><td>Medium</td></tr>
+                        <tr><td>Market research / surveys</td><td>Medium</td></tr>
+                        <tr><td>News coverage</td><td>Medium</td></tr>
+                        <tr><td>Social media sentiment</td><td>Low‑Medium</td></tr>
+                        <tr><td>Pure intuition</td><td>Low</td></tr>
                     </tbody>
                 </table>
-                <p>When confidence is low, mark the associated variable with a “?” sticker on the board, reflecting an
-                    explicit acknowledgment of uncertainty.</p>
+                <p>When confidence is low, mark the associated variable with a “?” sticker on the board.</p>
             </div>
         </details>
 
-        <!-- 3. From Market Position to Thermal Zones -->
-        <details>
+        <details id="thermal">
             <summary>3. From Market Position to Thermal Zones</summary>
             <div class="section-content">
-                <p>A marble’s thermal zone reflects its competitive strength relative to the market. Market share,
-                    revenue rank, and management’s own segmentation (e.g., “core,” “growth,” “legacy”) provide useful
-                    signals.</p>
+                <p>A marble's thermal zone reflects its competitive strength relative to the market.</p>
                 <p><strong>Practical heuristics (not rigid rules):</strong></p>
                 <ul>
-                    <li>Assets that hold a clearly dominant market position and are highly defensible typically belong
-                        in the <strong>Power Zone</strong>.</li>
-                    <li>Assets that are strong but contested, or growing in a competitive field, tend to sit in the
-                        <strong>Maneuver Zone</strong>.
-                    </li>
-                    <li>Assets that are declining, marginal, experimental, or losing relevance are candidates for the
-                        <strong>Death Zone</strong>.
-                    </li>
+                    <li>Assets with a clearly dominant market position and high defensibility typically belong in the <strong>Power Zone</strong>.</li>
+                    <li>Assets that are strong but contested, or growing in a competitive field, tend to sit in the <strong>Maneuver Zone</strong>.</li>
+                    <li>Assets that are declining, marginal, experimental, or losing relevance are candidates for the <strong>Death Zone</strong>.</li>
                 </ul>
-                <p>When exact market share is unavailable, use revenue rank within the defined market or the qualitative
-                    descriptions provided by management.</p>
+                <p>When exact market share is unavailable, use revenue rank within the defined market or qualitative descriptions from management.</p>
             </div>
         </details>
 
-        <!-- 4. Calibrating the Strategic Force Field (SFF) with Evidence -->
-        <details>
+        <details id="sff">
             <summary>4. Calibrating the Strategic Force Field (SFF) with Evidence</summary>
             <div class="section-content">
-                <p>For each force, assign an intensity (0–3) informed by data. The descriptions below are interpretive
-                    anchors, not formulas.</p>
+                <p>For each force, assign an intensity (0–3) informed by data. The descriptions below are interpretive anchors, not formulas.</p>
 
                 <h4>4.1 Center Gravity (per player)</h4>
                 <ul>
                     <li><strong>0:</strong> Negligible market presence, new entrant.</li>
                     <li><strong>1:</strong> Niche player, limited recognition.</li>
                     <li><strong>2:</strong> Strong competitor, recognized brand, significant share.</li>
-                    <li><strong>3:</strong> Dominant incumbent with network effects, scale, and high switching costs.
-                    </li>
+                    <li><strong>3:</strong> Dominant incumbent with network effects, scale, and high switching costs.</li>
                 </ul>
-                <p><em>Evidence:</em> Market share reports, brand valuation studies, platform metrics (monthly active
-                    users, gross merchandise volume).</p>
+                <p><em>Evidence:</em> Market share reports, brand valuation studies, platform metrics.</p>
 
                 <h4>4.2 Loyalty Friction</h4>
                 <ul>
@@ -388,8 +335,7 @@
                     <li><strong>2:</strong> Contracts, integration, moderate switching costs.</li>
                     <li><strong>3:</strong> Deeply embedded, multi‑year contracts, regulatory or technical lock‑in.</li>
                 </ul>
-                <p><em>Evidence:</em> Customer retention rates, contract renewal data, integration depth, switching cost
-                    analyses.</p>
+                <p><em>Evidence:</em> Customer retention rates, contract renewal data, switching cost analyses.</p>
 
                 <h4>4.3 Regulatory Wind</h4>
                 <ul>
@@ -398,8 +344,7 @@
                     <li><strong>2:</strong> Active regulatory scrutiny, proposed changes.</li>
                     <li><strong>3:</strong> Major regulatory overhaul or enforcement underway.</li>
                 </ul>
-                <p><em>Evidence:</em> Legal proceedings section of annual reports, regulatory filings, government
-                    announcements.</p>
+                <p><em>Evidence:</em> Legal proceedings section of annual reports, regulatory filings, government announcements.</p>
 
                 <h4>4.4 Narrative Tension</h4>
                 <ul>
@@ -417,8 +362,7 @@
                     <li><strong>2:</strong> Mid‑size, noticeable bureaucracy.</li>
                     <li><strong>3:</strong> Large incumbent with legacy systems and slow decision‑making.</li>
                 </ul>
-                <p><em>Evidence:</em> Employee count, management layers, time‑to‑market for new products, historical
-                    restructuring frequency.</p>
+                <p><em>Evidence:</em> Employee count, management layers, time‑to‑market for new products, historical restructuring frequency.</p>
 
                 <h4>4.6 Shareholder Pressure</h4>
                 <ul>
@@ -427,8 +371,7 @@
                     <li><strong>2:</strong> Quarterly earnings pressure, active analyst community.</li>
                     <li><strong>3:</strong> Activist investors, turnaround demands, high payout expectations.</li>
                 </ul>
-                <p><em>Evidence:</em> Earnings call tone, activist filings, dividend/buyback activity, executive
-                    compensation structure.</p>
+                <p><em>Evidence:</em> Earnings call tone, activist filings, dividend/buyback activity, executive compensation structure.</p>
 
                 <h4>4.7 Talent Field</h4>
                 <ul>
@@ -437,55 +380,37 @@
                     <li><strong>2:</strong> Strong employer brand, competitive compensation.</li>
                     <li><strong>3:</strong> Talent magnet, top destination in the industry.</li>
                 </ul>
-                <p><em>Evidence:</em> Glassdoor ratings, LinkedIn headcount trends, employee turnover reports,
-                    compensation surveys.</p>
+                <p><em>Evidence:</em> Glassdoor ratings, LinkedIn headcount trends, employee turnover reports, compensation surveys.</p>
             </div>
         </details>
 
-        <!-- 5. Identifying Strategic Mass and Anchor Marbles -->
-        <details>
+        <details id="mass">
             <summary>5. Identifying Strategic Mass and Anchor Marbles</summary>
             <div class="section-content">
-                <p><strong>Strategic Mass</strong> is typically associated with assets that contribute a substantial
-                    share of revenue, profit, ecosystem leverage, or strategic importance. Revenue share is informative
-                    but should not be treated as the sole criterion. Management commentary and inter‑segment
-                    dependencies also signal Strategic Mass. Look in the “Segment Information” footnote of the annual
-                    report and in the MD&A for assets described as “core,” “platform,” or “key growth driver.”</p>
-                <p><strong>Anchor Marbles</strong> are assets so fundamental to the company’s identity or economics that
-                    moving them would be existential. They often appear in the “Risk Factors” section as critical to the
-                    business, fund the majority of other operations, or represent the original flagship product around
-                    which the company was built.</p>
-                <p><em>Note:</em> Anchor designations are modeling choices, not absolute truths. Two equally skilled
-                    teams may calibrate differently. The value lies in the discussion, not the label.</p>
+                <p><strong>Strategic Mass</strong> is typically associated with assets that contribute a substantial share of revenue, profit, ecosystem leverage, or strategic importance. Look in the “Segment Information” footnote of the annual report and in the MD&A for assets described as “core,” “platform,” or “key growth driver.”</p>
+                <p><strong>Anchor Marbles</strong> are assets so fundamental to the company's identity or economics that moving them would be existential. They often appear in the “Risk Factors” section as critical to the business, fund the majority of other operations, or represent the original flagship product.</p>
+                <p><em>Note:</em> Anchor designations are modeling choices, not absolute truths. Two equally skilled teams may calibrate differently. The value lies in the discussion, not the label.</p>
             </div>
         </details>
 
-        <!-- 6. Drawing Dependency Arrows from Financial Disclosures -->
-        <details>
+        <details id="dependencies">
             <summary>6. Drawing Dependency Arrows from Financial Disclosures</summary>
             <div class="section-content">
                 <p>Dependencies can be inferred from:</p>
                 <ul>
-                    <li><strong>Inter‑segment revenue:</strong> If Segment A reports revenue from Segment B, consider an
-                        arrow from A to B.</li>
-                    <li><strong>Management commentary:</strong> Statements like “Our Cloud business benefits from our
-                        core enterprise relationships” suggest a dependency arrow from Cloud (dependent) to Enterprise
-                        (supporter).</li>
-                    <li><strong>Supply chain concentration:</strong> A product dependent on a single supplier or
-                        technology may warrant a solid arrow.</li>
-                    <li><strong>Brand halo:</strong> A corporate brand supporting multiple product lines is often best
-                        represented with dashed influence arrows.</li>
+                    <li><strong>Inter‑segment revenue:</strong> If Segment A reports revenue from Segment B, consider an arrow from A to B.</li>
+                    <li><strong>Management commentary:</strong> Statements like “Our Cloud business benefits from our core enterprise relationships” suggest a dependency arrow from Cloud (dependent) to Enterprise (supporter).</li>
+                    <li><strong>Supply chain concentration:</strong> A product dependent on a single supplier or technology may warrant a solid arrow.</li>
+                    <li><strong>Brand halo:</strong> A corporate brand supporting multiple product lines is often best represented with dashed influence arrows.</li>
                 </ul>
                 <p>The “Business” section (Item 1 in a 10‑K) and the MD&A are the richest sources.</p>
             </div>
         </details>
 
-        <!-- 7. Illustrative Example -->
-        <details>
+        <details id="example">
             <summary>7. Illustrative Example: A Large Technology Company</summary>
             <div class="section-content">
-                <p><em>This example is illustrative, based on publicly available market intelligence at the time of
-                        writing. It is a model, not a factual assertion about the company’s internal strategy.</em></p>
+                <p><em>This example is illustrative, based on publicly available market intelligence at the time of writing. It is a model, not a factual assertion about the company's internal strategy.</em></p>
                 <p><strong>Market:</strong> Global enterprise productivity and cloud platform market.</p>
                 <p><strong>Players and marbles (illustrative):</strong></p>
                 <ul>
@@ -496,107 +421,36 @@
 
                 <h4>Thermal zone placement (our company, illustrative)</h4>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Marble</th>
-                            <th>Zone</th>
-                            <th>Rationale</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Marble</th><th>Zone</th><th>Rationale</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Cloud Platform</td>
-                            <td>Power Zone</td>
-                            <td>Strong #2 position with high growth</td>
-                        </tr>
-                        <tr>
-                            <td>Productivity Suite</td>
-                            <td>Power Zone</td>
-                            <td>Dominant in enterprise productivity</td>
-                        </tr>
-                        <tr>
-                            <td>Legacy OS</td>
-                            <td>Power Zone</td>
-                            <td>Still dominant, but relevance shifting</td>
-                        </tr>
-                        <tr>
-                            <td>Professional Network</td>
-                            <td>Maneuver Zone</td>
-                            <td>Niche leader, not the core profit engine</td>
-                        </tr>
-                        <tr>
-                            <td>Gaming Division</td>
-                            <td>Maneuver Zone</td>
-                            <td>Competitive but not market‑leading</td>
-                        </tr>
-                        <tr>
-                            <td>Emerging AI Assistant</td>
-                            <td>Maneuver Zone</td>
-                            <td>Early stage, narrative‑driven</td>
-                        </tr>
+                        <tr><td>Cloud Platform</td><td>Power Zone</td><td>Strong #2 position with high growth</td></tr>
+                        <tr><td>Productivity Suite</td><td>Power Zone</td><td>Dominant in enterprise productivity</td></tr>
+                        <tr><td>Legacy OS</td><td>Power Zone</td><td>Still dominant, but relevance shifting</td></tr>
+                        <tr><td>Professional Network</td><td>Maneuver Zone</td><td>Niche leader, not the core profit engine</td></tr>
+                        <tr><td>Gaming Division</td><td>Maneuver Zone</td><td>Competitive but not market‑leading</td></tr>
+                        <tr><td>Emerging AI Assistant</td><td>Maneuver Zone</td><td>Early stage, narrative‑driven</td></tr>
                     </tbody>
                 </table>
 
                 <h4>SFF calibration (illustrative)</h4>
                 <table>
-                    <thead>
-                        <tr>
-                            <th>Force</th>
-                            <th>Intensity</th>
-                            <th>Rationale</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Force</th><th>Intensity</th><th>Rationale</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Center Gravity (our company)</td>
-                            <td>3</td>
-                            <td>Large installed base, integration across suite</td>
-                        </tr>
-                        <tr>
-                            <td>Center Gravity (Competitor B)</td>
-                            <td>3</td>
-                            <td>Dominant in cloud infrastructure</td>
-                        </tr>
-                        <tr>
-                            <td>Loyalty Friction</td>
-                            <td>3</td>
-                            <td>Multi‑year contracts, deep integration</td>
-                        </tr>
-                        <tr>
-                            <td>Regulatory Wind</td>
-                            <td>2</td>
-                            <td>Active antitrust and AI regulation</td>
-                        </tr>
-                        <tr>
-                            <td>Narrative Tension</td>
-                            <td>3</td>
-                            <td>Intense AI hype cycle</td>
-                        </tr>
-                        <tr>
-                            <td>Organizational Inertia (our company)</td>
-                            <td>2</td>
-                            <td>Large but has shown agility</td>
-                        </tr>
-                        <tr>
-                            <td>Shareholder Pressure (our company)</td>
-                            <td>2</td>
-                            <td>Quarterly earnings, but strong stock performance</td>
-                        </tr>
-                        <tr>
-                            <td>Talent Field (our company)</td>
-                            <td>3</td>
-                            <td>Top employer brand</td>
-                        </tr>
+                        <tr><td>Center Gravity (our company)</td><td>3</td><td>Large installed base, integration across suite</td></tr>
+                        <tr><td>Center Gravity (Competitor B)</td><td>3</td><td>Dominant in cloud infrastructure</td></tr>
+                        <tr><td>Loyalty Friction</td><td>3</td><td>Multi‑year contracts, deep integration</td></tr>
+                        <tr><td>Regulatory Wind</td><td>2</td><td>Active antitrust and AI regulation</td></tr>
+                        <tr><td>Narrative Tension</td><td>3</td><td>Intense AI hype cycle</td></tr>
+                        <tr><td>Organizational Inertia (our company)</td><td>2</td><td>Large but has shown agility</td></tr>
+                        <tr><td>Shareholder Pressure (our company)</td><td>2</td><td>Quarterly earnings, but strong stock performance</td></tr>
+                        <tr><td>Talent Field (our company)</td><td>3</td><td>Top employer brand</td></tr>
                     </tbody>
                 </table>
 
                 <h4>Strategic Mass and Anchors (one possible calibration)</h4>
                 <ul>
-                    <li><strong>Strategic Mass:</strong> Cloud Platform and Productivity Suite—they generate the
-                        majority of revenue and support other segments.</li>
-                    <li><strong>Anchor Marbles:</strong> One possible calibration would identify the Cloud Platform and
-                        Legacy OS as Anchors because of their foundational role. However, another team might argue that
-                        the Cloud Platform is the sole Anchor today.</li>
+                    <li><strong>Strategic Mass:</strong> Cloud Platform and Productivity Suite—they generate the majority of revenue and support other segments.</li>
+                    <li><strong>Anchor Marbles:</strong> One possible calibration would identify the Cloud Platform and Legacy OS as Anchors because of their foundational role. However, another team might argue that the Cloud Platform is the sole Anchor today.</li>
                 </ul>
 
                 <h4>Dependency Arrows (illustrative)</h4>
@@ -615,51 +469,325 @@
                 </ul>
 
                 <h4>Sample Move (illustrative)</h4>
-                <p>Medium‑IP Radial Attack with Emerging AI against Competitor A’s productivity tools, bundling AI
-                    features at no extra cost and leveraging the Productivity Suite‑Cloud dependency.</p>
+                <p>Medium‑IP Radial Attack with Emerging AI against Competitor A's productivity tools, bundling AI features at no extra cost and leveraging the Productivity Suite‑Cloud dependency.</p>
             </div>
         </details>
 
-        <!-- 8. Running the Session -->
-        <details>
+        <details id="session">
             <summary>8. Running the Session</summary>
             <div class="section-content">
-                <p>With a board calibrated as above, a facilitator can run a full SSCM 3.0 session. The
-                    evidence‑informed placements provide a grounded starting point; the simulation remains open to
-                    debate, surprise, and the Empty Circle ritual.</p>
+                <p>With a board calibrated as above, a facilitator can run a full SSCM 3.0 session. The evidence‑informed placements provide a grounded starting point; the simulation remains open to debate, surprise, and the Empty Circle ritual.</p>
+                <p>Refer to the <em>Complete Practical Implementation Guide</em> for detailed facilitation scripts, Phase 1–7 instructions, and troubleshooting.</p>
             </div>
         </details>
 
-        <!-- 9. Further Resources -->
-        <details>
-            <summary>9. Further Resources</summary>
+        <!-- ==================== PART B: BUSINESS PRIMER ==================== -->
+        <h2 id="part-b">Part B — Business Primer: Understanding Markets</h2>
+
+        <div class="primer-notice">
+            <strong>Who this section is for:</strong> If you run a small business, manage a team, sell a product, or are simply curious about why some companies thrive while others vanish, this primer is for you. It teaches the fundamental concepts of competition, resources, positioning, and decision‑making that experienced businesspeople know intuitively but rarely explain. No prior business education is assumed. By the time you finish, you will be ready to approach strategic thinking with confidence—and to get the most out of the Competitive Circle framework.
+        </div>
+
+        <details id="primer-intro">
+            <summary>Introduction to the Primer</summary>
+            <div class="section-content">
+                <p>This section is a complete, self‑contained business primer. It does not teach the Competitive Circle model itself—that is the job of the main manual. Instead, it teaches the underlying reality the model tries to represent: what markets are, how they behave, what it means to compete, and why human beings so often make poor strategic choices.</p>
+                <p>Read this primer if any of the following terms feel unfamiliar: market segment, switching cost, network effect, organizational inertia, cognitive bias, value chain, moat, narrative tension, or coopetition. By the time you finish, these will be part of your working vocabulary.</p>
+            </div>
+        </details>
+
+        <details id="primer1">
+            <summary>1. What Is a Market? — The Invisible Arena</summary>
+            <div class="section-content">
+                <p>A market is not a physical place. It is the sum of all exchanges—actual and potential—between people who want something and people who can provide it. When we talk about “the market for smartphones” or “the market for coffee in São Paulo,” we are drawing an imaginary circle around a group of buyers and sellers who interact under certain rules.</p>
+                <p><strong>The three essential elements of any market are:</strong></p>
+                <ol>
+                    <li><strong>Buyers</strong> — individuals or organizations with a need or desire, and the ability to pay.</li>
+                    <li><strong>Sellers</strong> — those who offer products, services, or solutions to meet those needs.</li>
+                    <li><strong>A medium of exchange</strong> — usually money, but sometimes barter, attention, or data.</li>
+                </ol>
+                <p>Everything else—competition, pricing, regulation, branding—emerges from the interactions among these three elements. Markets exist wherever there is scarcity and choice.</p>
+                <p><strong>Markets have rules.</strong> Some are formal (laws, regulations, contracts). Others are informal (trust, reputation, custom). A market works only when participants broadly follow these rules. When they break down—through fraud, monopoly abuse, or political collapse—the market itself can freeze or disintegrate.</p>
+                <p><strong>Markets also have temperature.</strong> In some markets, transactions are fast and impersonal; prices change by the second, and loyalty is thin. In others, relationships dominate; a handshake matters more than a contract, and switching suppliers is slow and painful. The Competitive Circle framework captures this as “Terrain Friction.”</p>
+                <div class="quote-block">Actionable Insight: Before you make any strategic decision, define your market clearly. If you sell custom cakes in a small city, your market is not “the food industry”—it is “custom celebration cakes for households in X city with income above Y.” Precision prevents you from fighting shadows.</div>
+            </div>
+        </details>
+
+        <details id="primer2">
+            <summary>2. The Players — Who Competes and Why</summary>
+            <div class="section-content">
+                <p>Not everyone selling something similar to you is a competitor. And not every competitor is equally dangerous.</p>
+                <p><strong>Direct competitors</strong> offer a very similar product or service to the same customer group. Coca‑Cola and Pepsi are direct competitors. So are two plumbing companies serving the same neighborhood.</p>
+                <p><strong>Indirect competitors</strong> solve the same customer need in a different way. A movie theater and a streaming service both satisfy the need for entertainment, but they are not identical. Indirect competitors can become direct if technology or habits change.</p>
+                <p><strong>Potential entrants</strong> are not in the market today but could enter easily. If you run a food truck, a restaurant chain that has never done mobile vending could still become your competitor tomorrow. The threat of entry affects your behavior even if it never materializes.</p>
+                <p><strong>Substitutes</strong> are products or services that make yours unnecessary. A rise in teleconferencing can substitute for business travel. Substitutes don't compete on features; they eliminate the need altogether.</p>
+                <p><strong>Complementors</strong> are the opposite—they make your product more valuable. Smartphone apps are complementors to phone manufacturers. If complementors thrive, you thrive. If they suffer, you may suffer too. The Competitive Circle model explicitly represents complementors as marbles adjacent to a platform.</p>
+                <p><strong>Suppliers and buyers can also be competitors</strong> when they have power. A supplier who controls a rare material can squeeze your margins. A buyer who represents a huge portion of your revenue can dictate terms. This is the insight behind Porter's Five Forces.</p>
+                <div class="quote-block">Actionable Insight: List every type of player affecting your business. For each, ask: “What do they want? How could they harm or help me?” This simple exercise often reveals threats you have ignored.</div>
+            </div>
+        </details>
+
+        <details id="primer3">
+            <summary>3. Customers Are Not a Monolith — Needs, Segments, and Behaviors</summary>
+            <div class="section-content">
+                <p>Treating all customers as the same is a common and costly mistake. Markets are made of individuals and organizations with vastly different needs, budgets, and decision‑making processes.</p>
+                <p><strong>Segmentation</strong> is the practice of dividing a market into meaningful subgroups. You can segment by demographics (age, income, location), behavior (how often they buy, what triggers purchase), needs (what problem they are trying to solve), or willingness to pay (premium vs. budget). A segment is useful only if customers within it respond similarly to your offering and differently from customers in other segments.</p>
+                <p><strong>Customer jobs‑to‑be‑done</strong> is a powerful way to think about needs. People don't buy a drill because they want a drill; they buy it because they need a hole. Understanding the underlying “job” helps you see what alternatives customers might use.</p>
+                <p><strong>Customer behavior is not purely rational.</strong> Emotions, habits, social pressure, and cognitive biases all play a role. A customer may stick with a more expensive supplier simply because switching feels like a hassle. That “hassle” is real economic friction. The Competitive Circle calls this Loyalty Friction.</p>
+                <div class="quote-block">Actionable Insight: Pick your most important customer segment and interview five of them. Ask not what they think of your product, but what they were trying to accomplish when they chose it. The answers will surprise you.</div>
+            </div>
+        </details>
+
+        <details id="primer4">
+            <summary>4. The Flow of Value — How Money, Goods, and Information Move</summary>
+            <div class="section-content">
+                <p>Markets are not just collections of players; they are networks of flows. Understanding these flows reveals where power lies and where opportunities exist.</p>
+                <p><strong>The value chain</strong> is the sequence of activities that bring a product from raw materials to the end customer. Each step adds cost and (ideally) value. A coffee farmer grows beans, a processor roasts them, a distributor ships them, a café brews them, and a customer drinks them. If any link in the chain breaks, the whole system suffers.</p>
+                <p><strong>Information flows</strong> are equally important. In many markets, who knows what determines who has power. A real estate agent knows about properties before they are listed. A financial trader pays millions for data that arrives milliseconds faster. In the Competitive Circle, dependency arrows capture the critical links between assets; in the real world, those arrows often represent who relies on whom for information.</p>
+                <p><strong>Money flows</strong> tell you who profits. If a market has healthy margins at every level, it attracts entrants. If margins are squeezed, players exit. Tracking where money pools helps you position yourself where the profit is.</p>
+                <div class="quote-block">Actionable Insight: Sketch your value chain. At each step, ask: “Who captures the most value here? Why? Could that shift?” This is the starting point for vertical integration or partnership decisions.</div>
+            </div>
+        </details>
+
+        <details id="primer5">
+            <summary>5. Markets Are Never Still — The Forces of Change</summary>
+            <div class="section-content">
+                <p>If markets were static, strategy would be simple. They are not. Five persistent forces drive change:</p>
+                <ol>
+                    <li><strong>Technology</strong> — New tools can make old businesses obsolete overnight.</li>
+                    <li><strong>Regulation</strong> — Governments can open or close markets with a stroke of a pen.</li>
+                    <li><strong>Demographics</strong> — Aging populations, migration, and generational shifts change what people need and can afford.</li>
+                    <li><strong>Culture and narrative</strong> — What society values shifts. The rise of environmental consciousness created markets for electric cars and plant‑based meat. Narrative Tension in the Competitive Circle captures this force.</li>
+                    <li><strong>Competitors</strong> — Every move you make triggers a response. A price cut by one player can cascade through an entire industry. This dynamic, reactive nature of markets is at the heart of competitive dynamics research and is the reason the Competitive Circle simulates moves and counter‑moves.</li>
+                </ol>
+                <div class="quote-block">Actionable Insight: Every quarter, list the top three changes in your market. For each, write down one implication for your business. Do this consistently, and you will spot trends before they become crises.</div>
+            </div>
+        </details>
+
+        <details id="primer6">
+            <summary>6. Resources — More Than Just Money</summary>
+            <div class="section-content">
+                <p>When people think of business resources, they think of cash. But money is only one type of resource, and often not the most important.</p>
+                <p>The Resource‑Based View of the firm, a major academic theory, says that what really distinguishes companies is the unique bundle of resources they control. Resources can be:</p>
+                <ul>
+                    <li><strong>Physical</strong> — factories, equipment, real estate, inventory.</li>
+                    <li><strong>Human</strong> — skilled employees, experienced managers, a strong culture.</li>
+                    <li><strong>Intellectual</strong> — patents, proprietary technology, brand recognition, customer data.</li>
+                    <li><strong>Financial</strong> — cash reserves, access to credit, investment.</li>
+                    <li><strong>Organizational</strong> — processes, routines, partnerships, reputation.</li>
+                </ul>
+                <p>Not all resources are equal. A resource that anyone can buy on the open market cannot give you a lasting advantage. A resource that is valuable, rare, hard to imitate, and well‑organized (the VRIO framework) can be the foundation of long‑term success.</p>
+                <p><strong>Resources in the Competitive Circle</strong> are represented as marbles. But the framework also distinguishes among Asset, Network, Capability, and Brand, which correspond roughly to physical, relational, organizational, and reputational resources.</p>
+                <div class="quote-block">Actionable Insight: List your top five resources. For each, ask: “Could a competitor acquire or copy this within a year?” If the answer is yes, it is not a source of lasting advantage.</div>
+            </div>
+        </details>
+
+        <details id="primer7">
+            <summary>7. Positioning — Where You Stand Matters</summary>
+            <div class="section-content">
+                <p>Positioning is about choosing a place in the market that you can defend and from which you can grow. It is not just about product features; it is about how customers perceive you relative to alternatives.</p>
+                <p><strong>The core idea of positioning</strong> is that you cannot be everything to everyone. If you try, you end up being nothing to anyone. A successful position is:</p>
+                <ul>
+                    <li><strong>Distinctive</strong> — customers can describe what makes you different.</li>
+                    <li><strong>Defensible</strong> — competitors cannot easily copy it.</li>
+                    <li><strong>Valuable</strong> — enough customers care about the difference to pay for it.</li>
+                </ul>
+                <p><strong>Positioning is not the same as ranking.</strong> Being “number one” in market share is a result, not a position. A luxury brand and a budget brand can both have strong positions in the same market, even if one sells far fewer units.</p>
+                <p><strong>The Competitive Circle's thermal zones</strong> (Death Zone, Maneuver Zone, Power Zone) are a visual metaphor for competitive position. The Death Zone represents the periphery—vulnerable, low‑margin, easily disrupted. The Power Zone represents the center—dominant, well‑defended, hard to challenge. Most companies operate in the Maneuver Zone, the contested middle ground.</p>
+                <div class="quote-block">Actionable Insight: Write a one‑sentence positioning statement: “For [target customer], our [product/service] is the [category] that [unique benefit] because [reason to believe].” If you cannot fill this out clearly, your positioning is fuzzy.</div>
+            </div>
+        </details>
+
+        <details id="primer8">
+            <summary>8. The Unfair Advantages — Moats, Brands, and Networks</summary>
+            <div class="section-content">
+                <p>Some advantages are structural—they persist even when competitors know about them and try to copy them. These are often called “moats.”</p>
+                <p><strong>Types of moats:</strong></p>
+                <ul>
+                    <li><strong>Switching costs</strong> — it is expensive, time‑consuming, or risky for customers to leave you. Enterprise software companies thrive on this.</li>
+                    <li><strong>Network effects</strong> — your product becomes more valuable as more people use it. Social networks, payment systems, and marketplaces benefit from this.</li>
+                    <li><strong>Economies of scale</strong> — larger volume lowers your per‑unit cost, letting you price below competitors or invest more in innovation.</li>
+                    <li><strong>Brand</strong> — a trusted name can charge premium prices, attract better talent, and survive crises. Brand is not just a logo; it is stored trust.</li>
+                    <li><strong>Regulatory protection</strong> — patents, licenses, and government franchises can block competitors entirely.</li>
+                </ul>
+                <p>The Competitive Circle represents some of these advantages through Strategic Mass, Anchor Marbles, Center Gravity, and Brand aura. But the underlying concept is simpler: look for reasons why customers stay with you even when a cheaper, shinier alternative appears.</p>
+                <div class="quote-block">Actionable Insight: Identify your strongest moat. If you don't have one, what could you build over the next two years?</div>
+            </div>
+        </details>
+
+        <details id="primer9">
+            <summary>9. The Weight You Carry — Inertia, Legacy, and Culture</summary>
+            <div class="section-content">
+                <p>Large, established companies often seem slow. This is not laziness; it is inertia—the accumulated weight of processes, contracts, expectations, and habits that resists change.</p>
+                <p><strong>Sources of organizational inertia:</strong></p>
+                <ul>
+                    <li>Legacy systems that are expensive to replace.</li>
+                    <li>Long‑term contracts that limit flexibility.</li>
+                    <li>Internal politics that punish risk‑taking.</li>
+                    <li>A culture that values reliability over speed.</li>
+                    <li>The sheer coordination cost of moving thousands of people in a new direction.</li>
+                </ul>
+                <p>Inertia is not always bad. It can provide stability, reliability, and protection against reckless pivots. But it also makes it hard to respond to nimble challengers. The Competitive Circle's Mobility Delay Index (MDI) forces you to ask, “How fast can this asset realistically move?” In the real world, the answer is often “slower than you think.”</p>
+                <div class="quote-block">Actionable Insight: Estimate how long it would take your organization to launch a completely new product line from scratch. Double that estimate. That is your strategic speed. Plan accordingly.</div>
+            </div>
+        </details>
+
+        <details id="primer10">
+            <summary>10. The Many Shapes of a Fight — From Fragmented Markets to Duopolies</summary>
+            <div class="section-content">
+                <p>Not all competitive landscapes look the same. Recognizing the shape of your market helps you pick the right strategy.</p>
+                <ul>
+                    <li><strong>Fragmented markets</strong> — many small players, no one dominant. Restaurants, consulting, and local retail often look like this. Strategy: build efficiency or create a brand that stands out.</li>
+                    <li><strong>Concentrated markets</strong> — one or a few dominant players. Search engines, operating systems, and commercial aircraft are examples. Strategy for leaders: defend the core. Strategy for challengers: find niches or change the rules.</li>
+                    <li><strong>Duopolies</strong> — two major players. Think Coca‑Cola vs. Pepsi, Airbus vs. Boeing. Competition is intense but often stable, with implicit rules of engagement.</li>
+                    <li><strong>Platform markets</strong> — value depends on a network of complementors. Smartphone app stores, credit card networks, and ride‑sharing platforms operate this way. Strategy: grow the ecosystem, not just the core product.</li>
+                </ul>
+                <p>The Competitive Circle's six configurations (Homogeneous Dispersion, Concentrated Core, Bipolar Confrontation, Perimeter Defense, Infiltration, Critical Numerical Asymmetry) are a more granular way of describing these shapes, but the fundamental insight is the same: your strategy must match the structure you are in.</p>
+                <div class="quote-block">Actionable Insight: Which shape best describes your market? Find one public company in a similar‑shaped market and study its moves over the last five years. What worked? What didn't?</div>
+            </div>
+        </details>
+
+        <details id="primer11">
+            <summary>11. How Companies Actually Move — Initiatives, Reactions, and Timing</summary>
+            <div class="section-content">
+                <p>Strategy is not a static position; it is a sequence of moves. Every time you launch a product, cut a price, enter a new market, or form a partnership, you are making a move. And your competitors will respond.</p>
+                <p><strong>Types of strategic moves:</strong></p>
+                <ul>
+                    <li><strong>Direct attacks</strong> — head‑to‑head competition on price, features, or marketing.</li>
+                    <li><strong>Indirect maneuvers</strong> — lobbying, forming partnerships, shifting the narrative. These are often lower‑risk because they don't provoke immediate retaliation.</li>
+                    <li><strong>Repositioning</strong> — changing your own resources or focus without directly targeting a competitor. Internal restructuring, upskilling, and process improvement fall here.</li>
+                    <li><strong>Preemptive moves</strong> — acting before a competitor can, to seize a position or resource.</li>
+                </ul>
+                <p>The Competitive Circle models these as flicks with varying Impulse Power (IP) and Angle of Incidence (AI). But the underlying principle is that every move has a cost, a probability of success, and a likely counter‑move. Thinking two or three steps ahead is not a superpower; it is a discipline.</p>
+                <div class="quote-block">Actionable Insight: Before your next big move, write down: “If we do X, what is the most dangerous thing our main competitor could do in response? What would we do then?” This simple premortem exercise often reveals blind spots.</div>
+            </div>
+        </details>
+
+        <details id="primer12">
+            <summary>12. The Indirect Game — Influence, Narrative, and Regulation</summary>
+            <div class="section-content">
+                <p>Not all competition happens in the marketplace. Much of it happens in courtrooms, regulatory agencies, media channels, and industry forums.</p>
+                <p><strong>Regulation</strong> can be a weapon or a shield. Incumbents often support regulations that raise the cost of entry for newcomers. Challengers sometimes use antitrust complaints to weaken dominant players. Understanding the regulatory landscape is not just for lawyers; it is a core strategic skill.</p>
+                <p><strong>Narrative</strong> shapes perception. A company that convinces investors, customers, and talent that it represents the future can attract resources even before it proves its business model. Conversely, a negative narrative can destroy value regardless of fundamentals. The Competitive Circle's Narrative Tension force captures this.</p>
+                <p><strong>Alliances and partnerships</strong> allow you to fight without using your own resources. A small company that partners with a large distributor can suddenly reach customers it could never afford to acquire directly.</p>
+                <div class="quote-block">Actionable Insight: Identify one non‑market player (regulator, journalist, industry analyst, potential partner) who could significantly impact your business. What would it take to build a constructive relationship with them?</div>
+            </div>
+        </details>
+
+        <details id="primer13">
+            <summary>13. Alliances and Frenemies — Cooperation Amidst Competition</summary>
+            <div class="section-content">
+                <p>Competition is not the only game in town. Companies often cooperate with the same firms they compete against—a phenomenon called “coopetition.”</p>
+                <p><strong>Examples of coopetition:</strong></p>
+                <ul>
+                    <li>Samsung supplies screens to Apple while competing with them in smartphones.</li>
+                    <li>Airlines in different alliances share codes while fighting for the same passengers.</li>
+                    <li>Automakers jointly develop engines while competing on brands.</li>
+                </ul>
+                <p>Alliances can accelerate growth, share risk, and fill capability gaps. But they are fragile. Misaligned incentives, cultural clashes, and external shocks can dissolve them quickly. The Competitive Circle treats alliance marbles as jointly owned assets that can be attacked; in the real world, alliances are constantly tested by competitive pressure.</p>
+                <div class="quote-block">Actionable Insight: If you have a partner, ask: “Under what circumstances would this partner become a competitor?” If the answer is “they already could,” your alliance may be less stable than you think.</div>
+            </div>
+        </details>
+
+        <details id="primer14">
+            <summary>14. Why Smart People Make Dumb Decisions — An Introduction to Cognitive Biases</summary>
+            <div class="section-content">
+                <p>Human brains are not designed for strategic thinking. We evolved to survive on the savanna, not to run multinational corporations. As a result, we carry a set of cognitive biases—systematic errors in thinking—that distort our decisions.</p>
+                <p><strong>Key biases for strategists:</strong></p>
+                <ul>
+                    <li><strong>Overconfidence</strong> — we believe our plans will succeed more often than they actually will.</li>
+                    <li><strong>Confirmation bias</strong> — we seek information that supports what we already believe and ignore contradictory evidence.</li>
+                    <li><strong>Loss aversion</strong> — we feel the pain of losing more intensely than the pleasure of gaining, making us reluctant to cut losses or sacrifice peripheral assets.</li>
+                    <li><strong>Groupthink</strong> — in teams, the desire for harmony suppresses dissenting views.</li>
+                    <li><strong>Status quo bias</strong> — we prefer things to stay the same, even when change would be beneficial.</li>
+                    <li><strong>Anchoring</strong> — we rely too heavily on the first piece of information we receive.</li>
+                    <li><strong>Action bias</strong> — we feel compelled to do something, even when waiting would be better.</li>
+                </ul>
+                <p>The Competitive Circle framework explicitly addresses these biases with a Bias Guardian role and a structured Empty Circle ritual. But you can start countering biases right now by simply asking, “What would have to be true for my current plan to be wrong?”</p>
+                <div class="quote-block">Actionable Insight: Before your next important decision, appoint one person on your team to play “devil's advocate.” Their sole job is to argue against the plan. This is not negativity; it is insurance.</div>
+            </div>
+        </details>
+
+        <details id="primer15">
+            <summary>15. The Emotional Market — Fear, Greed, and Hype</summary>
+            <div class="section-content">
+                <p>Markets are not just economic systems; they are emotional systems. Fear and greed drive booms and busts. Hype can inflate a company's value far beyond its fundamentals; panic can crush it just as fast.</p>
+                <p><strong>Understanding market sentiment</strong> is not about predicting the future; it is about recognizing the mood of the crowd and deciding whether to ride it, hedge against it, or ignore it. The Competitive Circle captures this as Narrative Tension, but the underlying phenomenon is older than any framework—Tulip Mania in the 17th century was driven by the same emotional dynamics as cryptocurrency booms.</p>
+                <p><strong>Emotional discipline</strong> is a strategic asset. Companies that can stay calm when competitors are panicking, or that resist the urge to over‑invest during a hype peak, often emerge stronger. This requires a clear long‑term vision and a willingness to look boring while others chase excitement.</p>
+                <div class="quote-block">Actionable Insight: Look at your industry's current narrative. Is it euphoric, fearful, or indifferent? How might that sentiment be distorting your competitors' behavior? How can you position yourself to benefit when the sentiment inevitably shifts?</div>
+            </div>
+        </details>
+
+        <details id="primer16">
+            <summary>16. Thinking in Time — Cycles, Delays, and Patience</summary>
+            <div class="section-content">
+                <p>Strategy operates in time, but our brains are bad at long‑term thinking. We discount the future, overvalue the present, and underestimate how long things actually take.</p>
+                <p><strong>Cycles</strong> — many industries have predictable boom‑bust cycles. Commodities, real estate, and semiconductors all exhibit this. Recognizing where you are in a cycle can prevent you from expanding at the top and contracting at the bottom.</p>
+                <p><strong>Delays</strong> — the effects of strategic moves often take years to fully materialize. A brand built today may not yield customer trust for a decade. A cost‑cutting program may show immediate profit gains while silently destroying long‑term capability. The Competitive Circle's Mobility Delay Index forces teams to confront these timelines.</p>
+                <p><strong>Patience as strategy</strong> — sometimes the best move is no move. Waiting for a competitor to stumble, for a technology to mature, or for a regulation to shift can be more profitable than any action. This is captured by the Law of Offensive Patience in the Competitive Circle, and it runs counter to the action bias most of us feel.</p>
+                <div class="quote-block">Actionable Insight: For your most important strategic goal, estimate a realistic timeline. Now add 50%. Plan your resources and expectations around the longer timeline. You will still be early more often than late.</div>
+            </div>
+        </details>
+
+        <details id="primer17">
+            <summary>17. Seeing the Whole Board — From Intuition to Structured Thinking</summary>
+            <div class="section-content">
+                <p>By now, you have a framework for understanding markets, resources, positioning, competition, and the human factors that distort decision‑making. The final step is learning to put it all together.</p>
+                <p>Structured strategic thinking means:</p>
+                <ul>
+                    <li>Defining the market precisely.</li>
+                    <li>Mapping the players and their resources.</li>
+                    <li>Understanding the forces that shape the environment.</li>
+                    <li>Anticipating how moves will interact over time.</li>
+                    <li>Acknowledging what you don't know.</li>
+                </ul>
+                <p>The Competitive Circle framework provides a physical, visual way to do this with marbles, stickers, and a board. But even without the board, you can practice the same mental discipline. Before a big decision, sketch out the key players and ask, “If we do X, what happens? What could go wrong? What assumptions are we making?”</p>
+                <div class="quote-block">Actionable Insight: Take one current strategic challenge you face. Write down the answers to these five questions: (1) Who are the players? (2) What resources do they have? (3) What forces are shaping the market? (4) What moves are available to us? (5) What are we not seeing?</div>
+            </div>
+        </details>
+
+        <details id="primer18">
+            <summary>18. A Language for Strategy — Key Terms You'll Encounter in the Competitive Circle</summary>
+            <div class="section-content">
+                <p>This primer has introduced many terms that the Competitive Circle framework uses with specific, precise meanings. This chapter serves as a bridge, listing the most important ones so you can transition smoothly into the full manual.</p>
+                <ul>
+                    <li><strong>Thermal Zones</strong> — Death Zone, Maneuver Zone, Power Zone. The risk‑reward gradient of competitive positioning.</li>
+                    <li><strong>Strategic Force Field (SFF)</strong> — Seven observable market forces (Center Gravity, Loyalty Friction, Regulatory Wind, Narrative Tension, Organizational Inertia, Shareholder Pressure, Talent Field). Correlative heuristics, not literal physical forces.</li>
+                    <li><strong>Impulse Power (IP)</strong> — Intensity of a move: Low (incremental), Medium (significant), High (radical).</li>
+                    <li><strong>Angle of Incidence (AI)</strong> — Radial (direct attack) or Tangential (indirect maneuver).</li>
+                    <li><strong>Mobility Delay Index (MDI)</strong> — Speed at which an asset can reposition: Low (~1 cycle), Medium (2‑4), High (5+).</li>
+                    <li><strong>Strategic Mass (SM)</strong> — A resource of disproportionate systemic importance.</li>
+                    <li><strong>Anchor Marble</strong> — A foundational asset that cannot be moved without existential self‑harm.</li>
+                    <li><strong>Predatory Gravity</strong> — A descriptive label for the observed pattern where a dominant incumbent appears to passively erode a smaller challenger over time. A heuristic, not a measured causal force.</li>
+                    <li><strong>Dependency Arrows</strong> — Solid arrows showing critical links; dashed arrows showing influence.</li>
+                    <li><strong>Adversary Archetypes</strong> — Simplified behavioral profiles of competitors (Sleepy Goliath, Impulsive Predator, etc.). Subjective assumptions; should be tested against alternatives.</li>
+                    <li><strong>Empty Circle Ritual</strong> — A structured practice of listing what you don't know, to counter overconfidence.</li>
+                    <li><strong>Dissolution Rule</strong> — The protocol for abandoning the model when it generates more noise than clarity.</li>
+                </ul>
+                <p>With this vocabulary, you are ready to read the Competitive Circle manual—not as a mystery, but as a practical tool built on the concepts you now understand.</p>
+            </div>
+        </details>
+
+        <!-- ==================== SHARED ==================== -->
+        <h2 id="shared">Shared</h2>
+
+        <details id="resources">
+            <summary>Further Resources</summary>
             <div class="section-content">
                 <ul>
-                    <li><strong>Competitive Circle Manual (Final Edition):</strong> The complete theoretical framework.
-                    </li>
-                    <li><strong>Complete Practical Implementation Guide (Merged):</strong> Detailed facilitation
-                        scripts, materials, and troubleshooting.</li>
+                    <li><strong>Competitive Circle Manual (Final Edition):</strong> The complete theoretical framework, laws, and SSCM 3.0 method.</li>
+                    <li><strong>Complete Practical Implementation Guide (Merged):</strong> Detailed facilitation scripts, materials, troubleshooting, and worked examples.</li>
+                    <li><strong>Understanding Markets (Primer):</strong> The standalone book version of the business primer included in Part B of this guide.</li>
                 </ul>
-                <p>This companion is an extension, not a requirement. Use it to bring evidence into the circle and make
-                    your strategic conversations sharper, more honest, and more resilient to hindsight bias.</p>
+                <p>This companion guide is an extension, not a requirement. Use it to bring evidence into the circle and to build the foundational understanding that makes strategic conversations sharper, more honest, and more resilient to hindsight bias.</p>
             </div>
         </details>
 
-        <footer class="footer">
-
+        <footer class="footer" style="margin-top:2rem;">
             <hr>
-
-            <p>
-                Published as an official companion to the
-                Competitive Circle series.
-            </p>
-
-            <p style="margin-top:8px;font-size:.9rem;color:#64748b;">
-                © 2026 Competitive Circle
-            </p>
-
+            <p>Published as an official companion to the Competitive Circle series.</p>
+            <p style="margin-top:8px;font-size:.9rem;color:#64748b;">© 2026 Competitive Circle</p>
         </footer>
     </div>
 </body>
-
-</html>
+    </html>
