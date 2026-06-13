@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/flexsearch.bundle.min.js"></script>
+    <script src="search-data.js"></script>
+    <script src="search.js"></script>
     <title>Competitive Circle – Official Companion Guide & Business Primer</title>
+    <div style="position: sticky; top: 10px; z-index: 999; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 1.5rem;">
+  <input id="search" type="text" placeholder="Search the Companion Guide…" style="width:100%; padding:12px 16px; font-size:16px; border-radius:12px; border:1px solid #ddd; outline:none;" />
+  <div id="results" style="margin-top:10px; background:white; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08);"></div>
+    </div>
     <style>
         * {
             margin: 0;
@@ -186,6 +193,42 @@
                 padding: 0.8rem 1rem;
             }
         }
+        /* FlexSearch results */
+#search {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+#results {
+  margin-top: 10px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.result {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+.result:hover {
+  background: #f5f5f5;
+}
+.title {
+  font-weight: 600;
+}
+mark {
+  background: #fde68a;
+  padding: 0 2px;
+}
+.category {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 2px;
+}
     </style>
 </head>
 <body>
