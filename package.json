@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Competitive Circle Companion Guide with local search",
   "scripts": {
-    "build": "mkdir -p public/js && cp node_modules/flexsearch/dist/flexsearch.bundle.min.js public/js/",
-    "vercel-build": "npm run build"
-  },
+  "build": "mkdir -p js && cp node_modules/flexsearch/dist/flexsearch.bundle.min.js js/",
+  "vercel-build": "npm run build"
+  }
   "dependencies": {
     "flexsearch": "^0.7.31"
   },
