@@ -1,0 +1,15 @@
+{
+  "name": "competitive-circle-guide",
+  "version": "1.0.0",
+  "description": "Competitive Circle Companion Guide with local search",
+  "scripts": {
+    "build": "mkdir -p public/js && cp node_modules/flexsearch/dist/flexsearch.bundle.min.js public/js/",
+    "vercel-build": "npm run build"
+  },
+  "dependencies": {
+    "flexsearch": "^0.7.31"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
