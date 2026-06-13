@@ -23,14 +23,15 @@ input.addEventListener("input", async (e) => {
   }
 
   const results = await index.searchAsync(q, { enrich: true });
-  // Combine results from all fields, deduplicate by ID
   const seen = new Set();
   const flat = [];
   results.forEach(r => {
     r.result.forEach(doc => {
-      if (!seen.has(doc.id)) {
-        seen.add(doc.id);
-        flat.push(doc);
+      // When enriched, the document is inside doc.doc
+      const item = doc.doc || doc;
+      if (!seen.has(item.id)) {
+        seen.add(item.id);
+        flat.push(item);
       }
     });
   });
@@ -74,5 +75,5 @@ document.addEventListener("click", (e) => {
   target.scrollIntoView({ behavior: "smooth" });
   const details = target.closest("details");
   if (details) details.open = true;
-  box.innerHTML = ""; // clear after selection
+  box.innerHTML = "";
 });
